@@ -1,6 +1,8 @@
 # Algorithms
 
-**[Standard Lib](https://introcs.cs.princeton.edu/java/stdlib/)**
+All Algorithms' implementations(Obviously, without HW) has standard solutions in Course's Homepage. I would also reimplement some of them which are considered to be crucial.
+
+**[StandardSolution]()**
 
 # Overview
 

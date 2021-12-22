@@ -62,20 +62,24 @@
 ## Week 4: Search: Table & Tree
 
 - [ ] Sequential Search: Unordered 
-- [ ] Binary Search: Ordered
+- [x] Binary Search: Ordered
 - [x] Binary Search Tree
 - [ ] [Option] 2-3 Tree
 - [ ] Red-Black BSTs: A Derivative of 2-3 Tree
 - [ ] [Option] B-Trees: Another Derivative of 2-3 Tree
 - [ ] AVL Tree
+- [ ] Hash Table:Seperate Chainning
+- [ ] Hash Table: Linear Probing
+- [ ] Hash Table: Rehashing
+
+### Geometric Application  
+
 - [ ] 1d Range Search
 - [ ] Line Segment intersection
 - [ ] **Kd Tree: Computer Graphics**
 - [ ] Interval Search Trees
 - [ ] Segment Trees
-- [ ] Hash Table:Seperate Chainning
-- [ ] Hash Table: Linear Probing
-- [ ] Hash Table: Rehashing
+
 
 ### Application
 
@@ -87,8 +91,10 @@
 ## Week 5: Graph & Search
 
 - [x] Graph API
-- [ ] Depth-First Search
-- [ ] Breadth-First Search
+- [x] Depth-First Search
+- [x] Breadth-First Search
+- [ ] ConnectedComponents
+- [ ] Digraph API
 
 
 # Lecture 1: Union-Find
@@ -210,7 +216,8 @@ $1, \log N, N, NlogN, N^2, N^3,$ and $2^N$
 
 suffices to describe ordered-of-growth of typical algorithms.
 
-![1636101405640](/assets/1636101405640.jpg)
+![picture 1](images/b8cd9fbc89fb5d7a11b0ea95e64bc5dfff4ae2335e1835c5495379576d1ae2e6.jpg)  
+
 
 * Common order-of-growth classifications
 
@@ -884,7 +891,7 @@ Repeat until the queue is empty:
  - add each of v's unvisited neighbors to the queue, and mark them as visited.
 ```
 
-> **JAVA Syntax Memo**
+## **JAVA Syntax Memo**
 > -> About Iterable<T> & Iterator<T>
 
 ```java
@@ -905,7 +912,8 @@ Interface like this is convenient to definite ReversedIterator & Iterator in seq
 
 - In Java Containers, all Subclass of Collection would use ```Iteratable``` interface to implement ```for each``` functions.
 
-![picture 1](../images/123f02da696f17a016a6e4d6df8f7c96edf488d3b87dbff3f5a1737ca102daa6.png)  
+ ![picture 2](images/123f02da696f17a016a6e4d6df8f7c96edf488d3b87dbff3f5a1737ca102daa6.png)  
+
 
 
 ```java
@@ -940,7 +948,16 @@ public class demo<T> implements Iterable<T> {
 - Generic Array: When you wanna initialize a generic array, you should use mandatory casting like that:
 
 ```java
+@SuppressWarnings("unchecked")
 Bag<Integer>[] adj = (Bag<Integer>[]) new Object[V];
 //Unchecked type casting; Not safe 
 ```
+> Queue<T> is just a implements;
 
+To utilize ```Queue<T>```, We should initialize it like following:
+
+```java
+Queue<T> q = new LinkedList<T>();
+q.add(T);
+q.remove();
+```

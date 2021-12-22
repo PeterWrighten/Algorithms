@@ -5,7 +5,7 @@ public class binarysearch{
 	public int search(int[] a, int key){
 		int l0 = 0, r0 = a.length - 1;
 		while(l0 <= r0){
-			int mid = (l0 + r0) / 2;
+			int mid = l0 + (r0 - lo) / 2;
 			if(key < a[mid]){
 				r0 = mid - 1;
 			}else if(key > a[mid]){
@@ -25,6 +25,7 @@ public class binarysearch{
 		Scanner input = new Scanner(System.in);
 		System.out.println("Input the key you wanna search: ");
 		k = input.nextInt();
+		input.close();
 		int r = b.search(x, k) + 1;
 		System.out.println("The arrayNum of "+ k + " is " + r);
 	}

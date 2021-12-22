@@ -12,12 +12,12 @@
  * 
  *****************************************/
 
-
+package api;
 
 // import api.In;
 import java.util.NoSuchElementException;
 
-import Bag.Bag;
+import api.Bag;
 
 public class Graph{
     private static final String NEWLINE = System.getProperty("line.separator");

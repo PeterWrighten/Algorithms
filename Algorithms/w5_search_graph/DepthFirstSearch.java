@@ -13,6 +13,7 @@
 import java.util.Iterator;
 import java.util.Stack;
 import java.util.Scanner;
+import api.Graph;
 
 public class DepthFirstSearch {
     private boolean[] marked;

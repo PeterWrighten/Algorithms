@@ -656,7 +656,11 @@ In computer science, a symbol table is a data structure used by a language trans
 
 ## Binary Search Trees
 
+- Del: Hibbard del
+- Get
+- Put
 
+Correspondence betweeen QuickSort's Partition & BinarySearch Tree: 1-1
 
 
 ## 2-3 Tree and Red-Black Tree (The Derivative of 2-3 Tree)[Weak Balance]
@@ -894,6 +898,7 @@ Repeat until the queue is empty:
 ```
 
 ## **JAVA Syntax Memo**
+
 > -> About Iterable<T> & Iterator<T>
 
 ```java
@@ -963,3 +968,12 @@ Queue<T> q = new LinkedList<T>();
 q.add(T);
 q.remove();
 ```
+> Same Package's Compile 
+
+When you wanna compile file in the same package, you should add classpath when compiling. i.e:
+
+```shell
+ $ javac -cp [classpath] xxx.java
+```
+
+

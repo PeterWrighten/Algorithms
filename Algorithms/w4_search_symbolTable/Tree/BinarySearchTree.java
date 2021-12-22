@@ -3,7 +3,11 @@
  * 
  *  public class BinarySearchTree<Key extends Comparable<Key>, Value>:
  *      private Node root;
- *      private class Node;
+ *      private class Node(Key key, Value value) {
+ *          Key key;
+ *          Value value;
+ *          Node left, right;
+ *      };
  *      public void put(Key key, Value value);
  *      public Value get(Key key);
  *      public Iterable<Key> keys();

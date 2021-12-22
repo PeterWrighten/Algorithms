@@ -2,7 +2,7 @@
 
 All Algorithms' implementations(Obviously, without HW) has standard solutions in Course's Homepage. I would also reimplement some of them which are considered to be crucial.
 
-**[StandardSolution]()**
+**[StandardSolution](https://github.com/PeterWrighten/Algorithms/tree/main/StandardSolution)**
 
 # Overview
 

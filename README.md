@@ -95,11 +95,19 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 ## Week 5: Graph & Search
 
+### Part 1: Undirected Graph
+
 - [x] Graph API
 - [x] Depth-First Search
 - [x] Breadth-First Search
 - [ ] ConnectedComponents
+
+### Part 2: Directed Graph
+
 - [ ] Digraph API
+- [ ] Directed DFS
+- [ ] Directed BFS
+- [ ] **Word Net**
 
 
 # Lecture 1: Union-Find

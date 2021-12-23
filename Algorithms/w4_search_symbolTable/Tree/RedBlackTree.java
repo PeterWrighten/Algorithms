@@ -1,5 +1,7 @@
 /************************************************************
  * 
+ *  # Left-leaning RedBlackBST 
+ * 
  *  public class RedBlackTree<Key extends Comparable<Key>, Value>:
  *      private static final boolean RED = true;
  *      private static final boolean BLACK = false;
@@ -17,9 +19,12 @@
  *      private void flipColors(Node);
  *      public void put(Node, Key, Value);
  *      public Value get(Key);
- *      private Node delMin(Node, Key);
- *      public void delete(Key);
+ *      [Bug]private Node delMin(Node, Key);
+ *      [Bug]public void delete(Key);
  *      public Iterable<Key> keys();
+ * 
+ *  PS: In this LLRB BSTs, deletion is not self-balancing 
+ *       Because of Hibbard deletion.
  *      
  ************************************************************/
 
@@ -123,6 +128,7 @@ public class RedBlackTree<Key extends Comparable<Key>, Value>{
     private Node delMin(Node x) {
         if(x.left == null)   return null;
         x.left = delMin(x.left);
+
         return x;
     }
 
@@ -154,6 +160,7 @@ public class RedBlackTree<Key extends Comparable<Key>, Value>{
             x = min(old.right); 
             x.left = old.left; 
             x.right = delMin(old.right);
+            x.color = old.color;
         }
         x.count = 1 + size(x.left) + size(x.right);
         if(isRed(x.right) && !isRed(x.left))    x = rotateLeft(x);

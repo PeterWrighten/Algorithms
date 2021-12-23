@@ -1,6 +1,6 @@
 # Algorithms
 
-This Repo would focus on reimplement excellent Java Code of [Princeton Algorithms](https://algs4.cs.princeton.edu/code/).
+This Repo would focus on reimplementing excellent Java Code of [Princeton Algorithms](https://algs4.cs.princeton.edu/code/).
 
 # Todo List
 

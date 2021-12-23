@@ -5,6 +5,7 @@
  *    ADT: Graph G;
  *         boolean[] marked;
  *         int[] edgeTo[];
+ *         int S;
  *         private void dfs(Graph, int);
  *         public boolean hasPath(int);
  *         public Iterable<Integer> pathTo(int);

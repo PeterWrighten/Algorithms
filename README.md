@@ -70,6 +70,9 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] Red-Black BSTs: A Derivative of 2-3 Tree
 - [ ] [Option] B-Trees: Another Derivative of 2-3 Tree
 - [ ] AVL Tree
+- [ ] B Tree
+- [ ] B+ Tree
+- [ ] SkipList
 - [ ] Hash Table:Seperate Chainning
 - [ ] Hash Table: Linear Probing
 - [ ] Hash Table: Rehashing

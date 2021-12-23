@@ -1,9 +1,13 @@
 /*************************************************
  * 
  *    BreadthFirstSearch(Graph, int):
+ *          private boolean[] marked;
+ *          private int[] edgeTo;
+ *          private int[] disTo;
+ *          private ins S;
  *          void bfs(Graph, int);
  *          boolean hasPathTo(int);
- *          Iterable<Integer> pathTo(int);
+ *          Iterable<Integer> getPathTo(int);
  *          int disTo(int);
  *          
  *************************************************/

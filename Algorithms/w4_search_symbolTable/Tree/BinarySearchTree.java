@@ -7,6 +7,7 @@
  *          Key key;
  *          Value value;
  *          Node left, right;
+ *          int count;
  *      };
  *      public void put(Key key, Value value);
  *      public Value get(Key key);

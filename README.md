@@ -17,6 +17,8 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 # Todo List
 
+> My implementations (Almost Original) of algo is [here](https://github.com/PeterWrighten/Algorithms/tree/main/Algorithms).
+
 ## Week 1: QuickUnion
 
 - [x] Quickfind
@@ -107,12 +109,12 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] Digraph API
 - [ ] Directed DFS
 - [ ] Directed BFS
+- [ ] Bare-bones Web Crawler
 - [ ] **Word Net**
 
 
 # Lecture 1: Union-Find
 
->The implementation of algo is [here](https://github.com/PeterWrighten/Peter_CS/tree/main/Algorithms/).
 
 Union Find could be modelized as a dynamic connectivity problem.
 
@@ -820,7 +822,9 @@ Each key is equally likely to hash to an integer between 0 and M-1.
 - Planarity. Can you draw the graph in the plane with no crossing edges ?
 - Graph isomorphism. Do two adjacency lists represent the same graph ?
 
-## Graph API
+## Undirected Graph
+
+### Graph API
 
 ```java
 public class Graph {
@@ -852,7 +856,7 @@ public class Graph {
 }
 ```
 
-## Graph-Processing Algorithms 
+### Graph-Processing Algorithms 
 
 - **Design Pattern For Graph Processing**
 
@@ -874,7 +878,7 @@ public class Paths {
 ```
 
 
-### Depth-First Search(Put unvisited vertices on a stack)
+#### Depth-First Search(Put unvisited vertices on a stack)
 
 - Goal: Systematically search through a graph.
 - Idea: Mimic Maze Exploration.
@@ -893,12 +897,12 @@ Find all vertices connected to a given source vertex;
 
 Find a path between two vertices.
 
-### Breadth-First Search(Put unvisited vertices on a queue)
+#### Breadth-First Search(Put unvisited vertices on a queue)
 
 - Shortest path(Bellman-Ford): Find path from s to t that uses fewest number of edges.
 
 
-```
+```java
 BFS(From source vertex s)
 ------------------------------
 Put s onto a FIFO queue, and mark s as visited;
@@ -907,6 +911,57 @@ Repeat until the queue is empty:
  - remove the least recently added vertex v;
  - add each of v's unvisited neighbors to the queue, and mark them as visited.
 ```
+
+#### Connected Components
+
+- Goal. Partition vertices into connected components.
+
+```java
+Connected Components  
+------------------------------
+
+Initialize all vertices v as unmarked;
+
+For each unmarked vertex v, run DFS to identify all vertices discovered as part of the same component.
+
+```
+
+## Directed Graph (Digraph)
+
+**Digraph API** is almost same as **Graph API** besides the ```addEdge(int, int)``` part.
+
+### Directed DFS (Same as Undirected Graph)
+
+**Application**
+
+- Reachability APP: Program Control-flow Analysis; Mark-sweep Garbage Collection
+- Path finding
+- Directed Cycle detection
+- Topological Sort
+
+### Direected BFS (Same as Undirected Graph)
+
+**Application**
+
+- Multisource shortest Path
+- Route
+
+
+#### Web Crawler 
+
+Goal. Crawl web, starting from some root web page.
+
+Solution.[BFS with implicit digraph]
+
+- Choose root web page as source s;
+- Maintain a Queue of websites to explore;
+- Maintain a SET of discovered websites;
+- Dequeue the next website and enqueue websites to which it links. (Provide you haven't done so before.)
+
+#### Topological Sort
+
+
+
 
 ## **JAVA Syntax Memo**
 

@@ -67,7 +67,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [x] Binary Search: Ordered
 - [x] Binary Search Tree
 - [ ] [Option] 2-3 Tree
-- [ ] Red-Black BSTs: A Derivative of 2-3 Tree
+- [x] Red-Black BSTs: A Derivative of 2-3 Tree
 - [ ] [Option] B-Trees: Another Derivative of 2-3 Tree
 - [ ] AVL Tree
 - [ ] B Tree

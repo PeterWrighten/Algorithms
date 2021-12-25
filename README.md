@@ -125,6 +125,13 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |Problem|Solution|
 |:--:|:--:|
 |Single- and multi-source reachability| DirectedDFS|
-|Single-source directed paths|DFDirectedPaths|
+|Single-source directed paths|DepthFirstDirectedPaths|
+|Single-source shortest directed paths|BreadthFirstDirectedPaths|
+|Directed Cycle detection|DirectedCycle|
+|Depth-first Vertex Orders|DepthFirstOrder|
+|Precedence-constrained Scheduling|Topological|
+|Topological Sort|Topological|
+|Strong Connectivity|KosarajuSCC|
+|All-pairs Reachability|TransitiveClosure|
 
 

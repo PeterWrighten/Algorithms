@@ -819,15 +819,6 @@ For each unmarked vertex v, run DFS to identify all vertices discovered as part 
 
 **Digraph API** is almost same as **Graph API** besides the ```addEdge(int, int)``` part.
 
-### Directed DFS (Same as Undirected Graph)
-
-**Application**
-
-- Reachability APP: Program Control-flow Analysis; Mark-sweep Garbage Collection
-- Path finding
-- Directed Cycle detection
-- Topological Sort
-
 ### Direected BFS (Same as Undirected Graph)
 
 **Application**
@@ -835,8 +826,7 @@ For each unmarked vertex v, run DFS to identify all vertices discovered as part 
 - Multisource shortest Path
 - Route
 
-
-#### Web Crawler 
+#### Web Crawler: Bare-bones web crawler.
 
 Goal. Crawl web, starting from some root web page.
 
@@ -847,9 +837,82 @@ Solution.[BFS with implicit digraph]
 - Maintain a SET of discovered websites;
 - Dequeue the next website and enqueue websites to which it links. (Provide you haven't done so before.)
 
+### Directed DFS (Same as Undirected Graph)
+
+**Application**
+
+- Reachability APP: Program Control-flow Analysis; Mark-sweep Garbage Collection
+- Path finding
+- Directed Cycle detection
+- Topological Sort
+
+
 #### Topological Sort
 
+**Precedence scheduling**
 
+Goal. Given a set of tasks to be completed with precedence constraints, in which order should we schedule the tasks?
+
+Digraph model. vertex = task; edge = precedence constraint.
+
+**Topological sort**
+
+DAG. Directed acyclic graph.
+
+Topological sort. Redraw DAG so all edges point upwards.
+
+![picture 1](../images/866825743ed7fd1d9cff874d8a5b2903694bf19507839ff2f6da4dbd293f25f0.jpeg)
+
+```java
+Topological sort 
+----------------------------
+1. Run depth-first search.
+2. Return vertices in reverse postorder.
+```
+
+**Directed Cycle detection Application**
+
+- Precedence scheduling
+- Java Compiler: Cyclic inheritance
+- Microsoft Excel: Spreadsheet recalculation.
+
+#### Strongly-connected components 
+
+**Strongly connected**
+
+Def. Vertices v and w are strongly connected if there is both a directed path from v to w and a directed path from w to v.
+
+Key propety. Strong connectivity is an equivalence relation:
+
+- v is strongly connected to v.
+- if v->w, w->v.
+- if v->x, x->w, thus v->w.
+
+**Strong component**
+
+Def. A strong component is a maximal subset of strongly-connected vertices.
+
+**Kosaraju-Sharir Algorithm: intuition**
+
+*Reverse Graph.* Strong components in G are same as G'.
+
+*Kernal DAG.* Contract each strong component into a single vertex.
+
+*Idea.* 
+
+- Compute topological order(reverse postorder) in kernel DAG.
+- Run DFS, considering vertices in reverse topological order.
+
+![picture 2](../images/6e6026a72e0149a08254890dae7f5e7697a09ab0913ddc0a14dd219b81ac147d.jpg)  
+
+```java
+Kosaraju-Sharir Algorithm 
+------------------------------
+Phase 1. Compute reverse postorder in G'.
+Phase 2. Run DFS in G, visiting unmarked vertices in reverse postorder of G'.
+```
+
+*PS.*  The DFS in the first phase is crucial. The phase 2 is trival as long as the algorithms could mark the set of vertices reachable.
 
 
 ## **JAVA Syntax Memo**
@@ -931,4 +994,11 @@ When you wanna compile file in the same package, you should add classpath when c
  $ javac -cp [classpath] xxx.java
 ```
 
+> Reverse Set
 
+You could use ```Collections.reverse()``` to reverse.
+
+```java
+import java.util.Collections;
+Collections.reverse(l);
+```

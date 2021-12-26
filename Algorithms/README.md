@@ -579,6 +579,8 @@ In there, I just wanna talk about Red Black Tree.
 
   Red Black Tree and 2-3 Tree only support **insert and search** functions which could guarantee the balance. The deletion machanism is implemented by **Hibbard deletion**, which tends to make balance crash.
 
+  > Update: You could perfectly trick this problem by using ```moveRedLeft(Node)``` and ```moveRedRight(Node)``` API.
+
 ## AVL Tree [Rough Balance]
 
 - Evaluate Tree's Balance.

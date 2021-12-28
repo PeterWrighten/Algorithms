@@ -6,7 +6,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 # Overview
 
-[**Lecture Notes**](./Algorithms/README.md)
+[**Lecture Notes**](./MyAlgorithms/README.md)
 
 | Topic | Data Structure & Algorithms |
 |:--:|:--:|
@@ -117,6 +117,14 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] Directed BFS
 - [ ] Bare-bones Web Crawler
 - [ ] **Word Net**
+
+## Week 6: Graph & Optimization
+
+### Part 1: Undirected Graph
+
+- [x] Weighted-Edge API
+- [ ] Edge-Weighted Graph API
+- [ ] Minimus Spanning Tree
 
 # Problem Oriented Summary 
 

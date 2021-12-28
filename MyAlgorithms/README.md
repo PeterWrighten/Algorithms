@@ -581,6 +581,10 @@ In there, I just wanna talk about Red Black Tree.
 
   > Update: You could perfectly trick this problem by using ```moveRedLeft(Node)``` and ```moveRedRight(Node)``` API.
 
+**Deletion**
+
+The discussion about how to delete in RedBlack BST is [here](https://peterwrighten.github.io/2021/12/27/RedBlack-BST-New-Type-Art/).
+
 ## AVL Tree [Rough Balance]
 
 - Evaluate Tree's Balance.
@@ -915,6 +919,13 @@ Phase 2. Run DFS in G, visiting unmarked vertices in reverse postorder of G'.
 ```
 
 *PS.*  The DFS in the first phase is crucial. The phase 2 is trival as long as the algorithms could mark the set of vertices reachable.
+
+
+# Lecture 8: Graph & Optimize
+
+Now let's looking at Optimal Problem in Graph, which is much important in Discrete Math & Computer Science.
+
+## Minimum Spanning Tree
 
 
 ## **JAVA Syntax Memo**

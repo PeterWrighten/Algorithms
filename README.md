@@ -19,9 +19,9 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 # Todo List
 
-> My implementations (Almost Original) of algo is [here](https://github.com/PeterWrighten/Algorithms/tree/main/Algorithms).
+> My implementations (Almost Original) of algo is [here](https://github.com/PeterWrighten/Algorithms/tree/main/MyAlgorithms).
 
-## Week 1: QuickUnion
+## Week 1: UnionFind
 
 - [x] Quickfind
 - [x] Quickunion
@@ -39,7 +39,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] **Dequeue**
 - [ ] Dijkstra
 
-## Week 3: Sort
+## Week 3: Sorting
 
 - [x] InsertionSort
 - [x] SelectionSort
@@ -65,7 +65,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] Radix Sort
 - [ ] Intro Sort
 
-## Week 4: Search: Table & Tree
+## Week 4: Search: Symbol Table
 
 - [ ] Sequential Search: Unordered 
 - [x] Binary Search: Ordered
@@ -97,7 +97,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] File Indexing
 - [ ] Sparse Vectors
 
-## Week 5: Graph & Search
+## Week 5: Search: Graph
 
 ### Part 1: Undirected Graph
 
@@ -125,6 +125,8 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [x] Weighted-Edge API
 - [ ] Edge-Weighted Graph API
 - [ ] Minimus Spanning Tree
+- [ ] Union-Find API
+- [ ] Kruskal's Algorithm
 
 # Problem Oriented Summary 
 

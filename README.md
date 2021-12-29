@@ -128,7 +128,15 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] Union-Find API
 - [ ] Kruskal's Algorithm
 - [ ] LazyPrim's Algorithms
+- [ ] Indexed PQ API
 - [ ] EagerPrim's Algorithms
+- [ ] Clustering Algorithm
+
+### Part 2: Directed Graph
+
+- [ ] DirectedEdge
+- [ ] EdgeWeightedDigraph
+- [ ] Single-source shortest paths API
 
 # Problem Oriented Summary 
 

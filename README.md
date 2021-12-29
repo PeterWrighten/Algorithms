@@ -127,6 +127,8 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] Minimus Spanning Tree
 - [ ] Union-Find API
 - [ ] Kruskal's Algorithm
+- [ ] LazyPrim's Algorithms
+- [ ] EagerPrim's Algorithms
 
 # Problem Oriented Summary 
 

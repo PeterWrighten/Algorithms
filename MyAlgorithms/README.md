@@ -2,6 +2,16 @@
 
 The Lecture Note About Algorithms.
 
+## Tips
+
+If you wanna run programs in each part(folder), it is necessary to add ```-cp [classpath]``` flag when compiling.
+
+For example:
+
+```shell
+$ java -cp [classpath] [filename].java
+```
+
 # Lecture 1: Union-Find
 
 

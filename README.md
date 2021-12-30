@@ -135,7 +135,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 ### Part 2: Directed Graph
 
-- [ ] DirectedEdge
+- [x] DirectedEdge
 - [ ] EdgeWeightedDigraph
 - [ ] Single-source shortest paths API
 - [ ] Dijkstra Algorithm

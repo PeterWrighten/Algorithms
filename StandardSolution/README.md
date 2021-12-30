@@ -11,6 +11,7 @@ This Repo would focus on reimplementing excellent Java Code of [Princeton Algori
 ## PART 2: Sorting
 
 - [ ] QuickBentleyMcllroy: Optimized 3-way quicksort.
+- [ ] MinPQ
 
 ## PART 3: Searching 
 

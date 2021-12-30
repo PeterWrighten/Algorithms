@@ -23,7 +23,6 @@
 public class MinPQ<Key extends Comparable<Key>>implements Iterable<Key> {
     private Key[] pq;
     private int n;
-    private Comparator<Key> comparator;
     public MinPQ(int capacity) {
         pq = (Key[]) new Object[capacity + 1];
         n = 0;

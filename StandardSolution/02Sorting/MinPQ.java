@@ -64,9 +64,30 @@ public class MinPQ<Key extends Comparable<Key>>implements Iterable<Key> {
         }
     }
 
-    private swap(Key[] k, Key i, Key j) {
+    private void swap(Key[] k, Key i, Key j) {
         Key temp = k[i];
         k[i] = k[j];
         k[j] = temp;
     }
+
+    public Key delMin() {
+        Key min = pq[1];
+        swap(pq, 1, n--);
+        sink(1);
+        pq[n+1] = null;
+        if((n > 0) && (n == (pq.length - 1) / 4))   resize(pq.length / 2);
+        return min;
+    }
+
+    private void sink(int k) {
+        while(2 * k <= n) {
+            int j = 2*k;
+            if(j < n && pq[j].compareTo(pq[j+1]) < 0) j++;
+            if(pq[k].compareTo(pq[j]) < 0)  break;
+            swap(pq, k, j);
+            k = j;
+        }
+    }
+
+    
 }

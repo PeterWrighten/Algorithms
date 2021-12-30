@@ -55,6 +55,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] **8 Puzzle**
 - [x] Binaryheap
 - [x] Heapsort
+- [ ] Time-Dirven Simulation: Bouncing Ball
 - [ ] [Option] Event-driven simulation
 - [ ] Binomial Heap
 
@@ -137,21 +138,41 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] DirectedEdge
 - [ ] EdgeWeightedDigraph
 - [ ] Single-source shortest paths API
+- [ ] Dijkstra Algorithm
 
-# Problem Oriented Summary 
+# Application Oriented Summary 
 
-## Directed Graph
+## Computer Graphics
 
-|Problem|Solution|
-|:--:|:--:|
-|Single- and multi-source reachability| DirectedDFS|
-|Single-source directed paths|DepthFirstDirectedPaths|
-|Single-source shortest directed paths|BreadthFirstDirectedPaths|
-|Directed Cycle detection|DirectedCycle|
-|Depth-first Vertex Orders|DepthFirstOrder|
-|Precedence-constrained Scheduling|Topological|
-|Topological Sort|Topological|
-|Strong Connectivity|KosarajuSCC|
-|All-pairs Reachability|TransitiveClosure|
+|APP|Solution|Type|
+|:--:|:--:|:--:|
+|Video Game Shoot Aid|Kd Tree|Symbol Table|
+|Event-driven Simulation|Priority Queue|Binary Heap|
 
+## Computer Network
 
+|APP|Solution|Type|
+|:--:|:--:|:--:|
+|Web Crawler|Breadth First Search|Directed Graph|
+|Routing[1]|Dijkstra Algorithm|Directed Weighted Graph|
+|Routing[2]|Bellman Ford|Directed Weighted Graph|
+
+## Operating System
+
+|APP|Solution|Type|
+|:--:|:--:|:--:|
+|FileSystem|RedBlackTree|Symbol Table|
+|Scheduling|Topological Sort|DAG|
+
+## Programming Language (Compiler)
+
+|APP|Solution|Type|
+|:--:|:--:|:--:|
+|Mark-sweep Garbage Collection|Depth First Search|Digraph|
+|Cyclic inheritance|Depth First Search|DAG|
+
+## Database
+
+|APP|Solution|Type|
+|:--:|:--:|:--:|
+|File Organization|B+ Tree|Symbol Table|

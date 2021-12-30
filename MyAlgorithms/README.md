@@ -778,7 +778,7 @@ public class Paths {
 - Goal: Systematically search through a graph.
 - Idea: Mimic Maze Exploration.
 
-```
+```java
 DFS(to visit a vertex v)
 ----------------------------
 Marked v as visited.

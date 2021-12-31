@@ -123,6 +123,8 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 ### Part 1: Undirected Graph
 
+#### Minimum Spanning Tree
+
 - [x] Weighted-Edge API
 - [ ] Edge-Weighted Graph API
 - [ ] Minimus Spanning Tree
@@ -135,11 +137,14 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 ### Part 2: Directed Graph
 
+#### Shortest Path
+
 - [x] DirectedEdge
 - [x] EdgeWeightedDigraph
 - [ ] Single-source shortest paths API
-- [ ] Dijkstra Algorithm
+- [ ] Dijkstra Algorithm: Nonnegative Weight
 - [ ] **Seam Carving**
+- [ ] Bellman-Ford Algorithm: No negative Cycle
 
 # Application Oriented Summary 
 

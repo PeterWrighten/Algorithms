@@ -13,8 +13,8 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |Data types|**Resizing Array, Linked List;** Stack, Queue, Bag, Union-find, Priority Queue|
 |Sort| **Array, BinaryHeap;** Quicksort, Mergesort, Heapsort|
 |Search|**BST, Red-Black BST, HashTable**|
-|**Graphs**|BFS, DFS, Prim, Kruskal, Dijkstra|
-|Strings|Radix Sorts, Tries, KMP, Regexps, Data Compression|
+|**Graphs**|***Search:*** BFS, DFS, Topological Sort, Components; <br> <br> ***Optimize:*** Shortest Path, Minimum Spanning Tree, Maxflow & Mincut|
+|**Strings**|Radix Sorts, **Tries**, KMP, Regexps, Data Compression|
 |Advanced| B-Trees, Suffix Array, Maxflow|
 
 # Todo List
@@ -149,7 +149,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 #### Mincut & Maxflow
 
-
+- [ ] Ford Fulkerson Algorithm
 
 # Application Oriented Summary 
 

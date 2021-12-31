@@ -119,7 +119,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] Bare-bones Web Crawler
 - [ ] **Word Net**
 
-## Week 6: Graph & Optimization
+## Week 6: EdgeWeighted Graph & Optimization
 
 ### Part 1: Undirected Graph
 
@@ -133,7 +133,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] LazyPrim's Algorithms
 - [ ] Indexed PQ API
 - [ ] EagerPrim's Algorithms
-- [ ] Clustering Algorithm
+- [ ] Clustering Algorithm: K-Mean/KNN
 
 ### Part 2: Directed Graph
 
@@ -143,8 +143,13 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [x] EdgeWeightedDigraph
 - [ ] Single-source shortest paths API
 - [ ] Dijkstra Algorithm: Nonnegative Weight
+- [ ] Acyclic Shortest Paths
 - [ ] **Seam Carving**
 - [ ] Bellman-Ford Algorithm: No negative Cycle
+
+#### Mincut & Maxflow
+
+
 
 # Application Oriented Summary 
 
@@ -182,6 +187,13 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |APP|Solution|Type|
 |:--:|:--:|:--:|
 |File Organization|B+ Tree|Symbol Table|
+
+## AI 
+
+|APP|Solution|Type|
+|:--:|:--:|:--:|
+|Supervised Learning: Classification|KNN|Minimum Spanning Tree|
+|Unsupervised Learning: Clustering|K-Mean|Minimum Spanning Tree|
 
 ## Application
 

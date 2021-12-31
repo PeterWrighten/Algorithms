@@ -136,9 +136,10 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 ### Part 2: Directed Graph
 
 - [x] DirectedEdge
-- [ ] EdgeWeightedDigraph
+- [x] EdgeWeightedDigraph
 - [ ] Single-source shortest paths API
 - [ ] Dijkstra Algorithm
+- [ ] **Seam Carving**
 
 # Application Oriented Summary 
 
@@ -176,3 +177,11 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |APP|Solution|Type|
 |:--:|:--:|:--:|
 |File Organization|B+ Tree|Symbol Table|
+
+## Application
+
+|APP|Solution|Type|
+|:--:|:--:|:--:|
+|Flooding|Depth First Search|Photo Processing|
+|Seam Carving|Dijkstra's Algorithm|Photo Processing|
+

@@ -149,7 +149,15 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 #### Mincut & Maxflow
 
+- [ ] Flow Edge API: Original Network -> Risidual Network
+- [ ] Flow Network API
 - [ ] Ford Fulkerson Algorithm
+- [ ] Bipartite Graph: Perfect Matching
+- [ ] **Baseball Elimination**
+
+## Week 7: String: Sort
+
+- [ ] String in JAVA
 
 # Application Oriented Summary 
 

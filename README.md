@@ -109,7 +109,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 ### Part 2: Directed Graph
 
-- [ ] Digraph API
+- [x] Digraph API
 - [ ] Directed DFS
 - [ ] DForder
 - [ ] Topological Sort

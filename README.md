@@ -12,7 +12,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |:--:|:--:|
 |Data types|**Resizing Array, Linked List;** Stack, Queue, Bag, Union-find, Priority Queue|
 |Sort| **Array, BinaryHeap;** Quicksort, Mergesort, Heapsort|
-|Search|**BST, Red-Black BST, HashTable**|
+|Search|***Symbol Table:*** <br>**LinkedList, BST, Red-Black BST, HashTable**|
 |**Graphs**|***Search:*** BFS, DFS, Topological Sort, Components; <br> <br> ***Optimize:*** Shortest Path, Minimum Spanning Tree, Maxflow & Mincut|
 |**Strings**|Radix Sorts, **Tries**, KMP, Regexps, Data Compression|
 |Advanced| B-Trees, Suffix Array, Maxflow|
@@ -68,7 +68,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 ## Week 4: Search: Symbol Table
 
-- [ ] Sequential Search: Unordered 
+- [x] Linked List: Sequential Search
 - [x] Binary Search: Ordered
 - [x] Binary Search Tree
 - [ ] [Option] 2-3 Tree
@@ -78,7 +78,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] B Tree
 - [ ] B+ Tree
 - [ ] SkipList
-- [ ] Hash Table:Seperate Chainning
+- [x] Hash Table:Seperate Chainning
 - [ ] Hash Table: Linear Probing
 - [ ] Hash Table: Rehashing
 

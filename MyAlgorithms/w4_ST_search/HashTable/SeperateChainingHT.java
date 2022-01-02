@@ -14,7 +14,7 @@
  *          
  *          public void put(Key, Value);
  *          public Value get(Key);
- *          public void delte(Key);
+ *          public void delete(Key);
  * 
  **********************************************************************/
 

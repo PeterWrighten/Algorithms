@@ -1,4 +1,4 @@
-public final class String {
+public final class PseudoString {
     private int hash = 0;
     private final char[] s;
     public int hashCode() {
@@ -9,5 +9,6 @@ public final class String {
         hash = h;
         return h;       
     }
+    //...
     
 }

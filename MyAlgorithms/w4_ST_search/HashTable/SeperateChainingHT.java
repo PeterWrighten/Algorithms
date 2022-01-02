@@ -14,16 +14,17 @@
  *          
  *          public void put(Key, Value);
  *          public Value get(Key);
+ *          public void delte(Key);
  * 
  **********************************************************************/
 
 import java.util.Scanner;
-import java.util.Comparator;
-import java.util.NoSuchElementException;
+
 
 public class SeperateChainingHT<Key, Value> {
     private int M = 97;
     private Node[] st = new Node[M];
+    
 
     private static class Node {
         private Object key; /* static class should include static type. */
@@ -49,7 +50,7 @@ public class SeperateChainingHT<Key, Value> {
 
     }
 
-
+    @SuppressWarnings("unchecked")
     public Value get(Key key) {
         Node tmp = search(key);
         if(tmp == null) return null;
@@ -60,22 +61,33 @@ public class SeperateChainingHT<Key, Value> {
     public void put(Key key, Value value) {
         int i = hash(key);
         for(Node x = st[i]; x != null; x = x.next){ 
-            if(key.equals(x.key)) 
+            if(key.equals(x.key)) {
                 x.value = value;
-                return; 
+                return;
+            }      
         }  
         st[i] =  new Node(key, value, st[i]);
         
     }
 
-    private Value delete(Key key) {
-        Node tmp = search(key);
-        if(tmp == null) return null;
-        Value tem = (Value) tmp.value;
-        tmp = tmp.next;
-        return tem;
-        
-        
+    private Node delete(Node x, Key key) {
+        if(x == null || x.next == null) return null;
+        if(key.equals(x.key)) {
+            x = x.next;
+        }
+        x.next = delete(x.next, key);
+        return x;
+    }
+    @SuppressWarnings("unchecked")
+    public Value delete(Key key) {
+        int i = hash(key);
+        st[i] = delete(st[i], key);
+        for(Node x = st[i]; x != null; x = x.next) {
+            if(key.equals(x.key))
+                return (Value)x.value;
+        }
+        return null;
+
     }
 
     public static void main(String[] args) {

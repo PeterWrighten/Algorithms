@@ -64,7 +64,6 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] Bucket Sort
 - [ ] Counting Sort
 - [ ] Radix Sort
-- [ ] Intro Sort
 
 ## Week 4: Search: Symbol Table
 
@@ -158,6 +157,8 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 ## Week 7: String: Sort
 
 - [ ] String in JAVA
+- [ ] Longest Common Prefix
+- [ ] Counting Sort: Key-indexed Counting Sort
 
 # Application Oriented Summary 
 

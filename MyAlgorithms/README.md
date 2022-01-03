@@ -694,6 +694,22 @@ Each key is equally likely to hash to an integer between 0 and M-1.
 
 **JAVA Implementation: ```hash()``` & ```hashCode()```**
 
+```java 
+public final class PseudoString {
+    private int hash = 0;
+    private final char[] s;
+    public int hashCode() {
+        int h = hash;
+        if(h != 0) return h;
+        for(int i = 0; i < length(); i++) 
+            h = s[i] + (31 * h);
+        hash = h;
+        return h;       
+    }
+    //...
+}
+```
+
 1. "31x + y" Rule
 
 ### Hash Collision
@@ -958,6 +974,8 @@ Interface like this is convenient to definite ReversedIterator & Iterator in seq
 
 **Summary**
 
+> Iterable
+
 - In Java Containers, all Subclass of Collection would use ```Iteratable``` interface to implement ```for each``` functions.
 
  ![picture 2](images/123f02da696f17a016a6e4d6df8f7c96edf488d3b87dbff3f5a1737ca102daa6.png)  
@@ -993,6 +1011,8 @@ public class demo<T> implements Iterable<T> {
 }
 ```
 
+> Generic
+
 - Generic Array: When you wanna initialize a generic array, you should use mandatory casting like that:
 
 ```java
@@ -1000,6 +1020,19 @@ public class demo<T> implements Iterable<T> {
 Bag<Integer>[] adj = (Bag<Integer>[]) new Object[V];
 //Unchecked type casting; Not safe 
 ```
+
+- Use Generic Object to new Generic Object:
+
+```java
+
+private Node[] st; /* The generic object of Generic Type */
+private static class Node {/* Must be an static class */
+	Object key; /* Could just use Object type because static constraint. */
+	Object value;
+	Node next;
+}
+```
+
 > Queue<T> is just a implements;
 
 To utilize ```Queue<T>```, We should initialize it like following:
@@ -1024,4 +1057,42 @@ You could use ```Collections.reverse()``` to reverse.
 ```java
 import java.util.Collections;
 Collections.reverse(l);
+```
+
+> Java Memory Management
+
+1. You could only be allowed to change object when you invoke it.
+
+```java
+/* FalseCase */
+
+public void delete(Key key) {/* Not invoke Object Parameter (key is a primitive type but not an object) */
+	Node k = search(key);/* k is just a stack memory var, could not change object; */
+	//... 
+
+}
+
+/* TrueCase */
+
+public Node delete(Node x, Key key) {/* Node is an Object, so you could change it; */
+	if(x == null || x.next == null)	return null;
+	if(key.equals(x.key)) {
+		x = x.next;/* This is not a Stack Memory var, it is an Object, so you could change it. */
+	}
+	//...
+
+}
+
+/* In C++ */
+public: 
+	Node delete(Node& x, Key key) {/* if use Reference "&" in C++, it is more like invoke Object in Java. */
+		x = x.next;
+
+	}
+
+/* In C */
+	Node delete(Node* x, Key key) {/* C does not have reference, You have to use pointers. */
+		x = x->next; /* x = (*x).next */
+
+	}
 ```

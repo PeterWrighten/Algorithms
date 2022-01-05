@@ -62,7 +62,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 ### Appendix: Non-Comparison Sort
 
 - [ ] Bucket Sort
-- [ ] Counting Sort: Key-indexed
+- [x] Counting Sort: Key-indexed
 - [ ] LSD Radix Sort
 - [ ] MSD Radix Sort
 - [ ] 3-way Radix Quicksort
@@ -161,7 +161,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 - [ ] String in JAVA
 - [ ] Longest Common Prefix
-- [ ] Counting Sort: Key-indexed Counting Sort
+- [x] Counting Sort: Key-indexed Counting Sort
 - [ ] LSD Radix Sort
 - [ ] MSD Radix Sort
 - [ ] 3-way Radix Quicksort

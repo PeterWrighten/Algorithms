@@ -148,8 +148,8 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 #### Mincut & Maxflow
 
-- [ ] Flow Edge API: Original Network -> Risidual Network
-- [ ] Flow Network API
+- [x] Flow Edge API: Original Network -> Risidual Network
+- [x] Flow Network API
 - [ ] Ford Fulkerson Algorithm
 - [ ] Bipartite Graph: Perfect Matching
 - [ ] **Baseball Elimination**

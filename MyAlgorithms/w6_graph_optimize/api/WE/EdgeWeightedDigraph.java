@@ -1,7 +1,6 @@
-package api;
+package api.WE;
 
 import api.Bag;
-import api.DirectedEdge;
 /**************************************************************************
  * 
  *     public class EdgeWeightedDigraph:

@@ -88,6 +88,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 - [ ] 1d Range Search
 - [ ] Line Segment intersection
+- [ ] QuadTree
 - [ ] **Kd Tree: Computer Graphics**
 - [ ] Interval Search Trees
 - [ ] Segment Trees

@@ -166,6 +166,13 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] MSD Radix Sort
 - [ ] 3-way Radix Quicksort
 
+### Longest Repeated Substrings
+
+- [ ] Suffix Sort
+- [ ] Longest repeated substring
+- [ ] Manber-Myers MSD Algorithms
+- [ ] Suffixes Tree
+
 # Application Oriented Summary 
 
 ## Computer Graphics

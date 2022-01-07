@@ -14,7 +14,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |Sort| **Array, BinaryHeap;** Quicksort, Mergesort, Heapsort|
 |Search|***Symbol Table:*** <br>**LinkedList, BST, Red-Black BST, HashTable**|
 |**Graphs**|***Search:*** BFS, DFS, Topological Sort, Components; <br> <br> ***Optimize:*** Shortest Path, Minimum Spanning Tree, Maxflow & Mincut|
-|**Strings**|Radix Sorts, **Tries**, KMP, Regexps, Data Compression|
+|**Strings**|**Suffix Array**, Radix Sorts, **Suffixes Tree**, **Tries**, KMP, Regexps, Data Compression|
 |Advanced| B-Trees, Suffix Array, Maxflow|
 
 # Todo List
@@ -68,7 +68,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] 3-way Radix Quicksort
 
 
-## Week 4: Search: Symbol Table
+## Week 4: Symbol Table: Search
 
 - [x] Linked List: Sequential Search
 - [x] Binary Search: Ordered
@@ -100,7 +100,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] File Indexing
 - [ ] Sparse Vectors
 
-## Week 5: Search: Graph
+## Week 5: Graph: Search
 
 ### Part 1: Undirected Graph
 
@@ -121,7 +121,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] Bare-bones Web Crawler
 - [ ] **Word Net**
 
-## Week 6: EdgeWeighted Graph & Optimization
+## Week 6: EdgeWeighted Graph: Optimization
 
 ### Part 1: Undirected Graph
 
@@ -168,10 +168,15 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 ### Longest Repeated Substrings
 
+- [ ] Suffix Array
 - [ ] Suffix Sort
 - [ ] Longest repeated substring
 - [ ] Manber-Myers MSD Algorithms
 - [ ] Suffixes Tree
+
+## Week 8: String & Tries: Search
+
+- [ ] String Symbol Table
 
 # Application Oriented Summary 
 
@@ -216,7 +221,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |:--:|:--:|:--:|
 |Supervised Learning: Classification|KNN|Minimum Spanning Tree|
 |Unsupervised Learning: Clustering|K-Mean|Minimum Spanning Tree|
-
+|NLP|LRS|Suffix Sort|
 ## Application
 
 |APP|Solution|Type|

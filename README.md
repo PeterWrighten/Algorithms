@@ -178,6 +178,8 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 ## Week 8: String & Tries: Search
 
 - [ ] String Symbol Table
+- [ ] R-Way Trie
+- [ ] Ternary Search Trie
 
 # Application Oriented Summary 
 
@@ -202,6 +204,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |:--:|:--:|:--:|
 |FileSystem|RedBlackTree|Symbol Table|
 |Scheduling|Topological Sort|DAG|
+|Search & Word Processing|Suffix Sort & Tries|String|
 
 ## Programming Language (Compiler)
 
@@ -223,6 +226,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |Supervised Learning: Classification|KNN|Minimum Spanning Tree|
 |Unsupervised Learning: Clustering|K-Mean|Minimum Spanning Tree|
 |NLP|LRS|Suffix Sort|
+
 ## Application
 
 |APP|Solution|Type|

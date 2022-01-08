@@ -954,7 +954,18 @@ Now let's looking at Optimal Problem in Graph, which is much important in Discre
 ## Minimum Spanning Tree
 
 
-## **JAVA Syntax Memo**
+# Lecture 9: String & Sort
+
+## Counting Sort
+
+
+# Lecture 10: String & Trie: Search
+
+
+
+
+
+# **JAVA Syntax Memo**
 
 > -> About Iterable<T> & Iterator<T>
 
@@ -1096,3 +1107,9 @@ public:
 
 	}
 ```
+
+> Java Programming Method
+
+- Recursive-instance method.
+
+- Static: for all classes, not just current class.(Not allowed to use generic creation.)

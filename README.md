@@ -160,7 +160,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 ## Week 7: String: Sort
 
-- [ ] String in JAVA
+- [x] String in JAVA
 - [ ] Longest Common Prefix
 - [x] Counting Sort: Key-indexed Counting Sort
 - [ ] LSD Radix Sort
@@ -173,13 +173,25 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] Suffix Sort
 - [ ] Longest repeated substring
 - [ ] Manber-Myers MSD Algorithms
-- [ ] Suffixes Tree
 
 ## Week 8: String & Tries: Search
+
+### Tries
 
 - [ ] String Symbol Table
 - [ ] R-Way Trie
 - [ ] Ternary Search Trie
+- [ ] Trie Symbol Table
+- [ ] Patricia Trie: Aka Crit-bit tree, radix tree.
+- [ ] Suffix Tree: Patricia trie of suffixes of a string.
+
+### Substring Search
+
+- [ ] Brute force
+- [ ] Knuth-Morris-Pratt
+- [ ] Boyer-Moore
+- [ ] Rabin-Karp
+
 
 # Application Oriented Summary 
 
@@ -197,6 +209,8 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |Web Crawler|Breadth First Search|Directed Graph|
 |Routing[1]|Dijkstra Algorithm|Directed Weighted Graph|
 |Routing[2]|Bellman Ford|Directed Weighted Graph|
+|Choose IP in Routing Table|Longest prefix|Trie|
+|P2P network search|Patrica Trie|Trie|
 
 ## Operating System
 
@@ -218,6 +232,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |APP|Solution|Type|
 |:--:|:--:|:--:|
 |File Organization|B+ Tree|Symbol Table|
+|Search & Autocomplete|Patricia Trie|Trie|
 
 ## AI 
 
@@ -233,4 +248,6 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |:--:|:--:|:--:|
 |Flooding|Depth First Search|Photo Processing|
 |Seam Carving|Dijkstra's Algorithm|Photo Processing|
+|Compressed quad-tree for N-Body simulation|Patricia Trie|Trie|
+
 

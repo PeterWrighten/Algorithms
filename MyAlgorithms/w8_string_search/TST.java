@@ -27,5 +27,46 @@ public class TST <Value>{
     public void put(String key, Value val) {
         root = put(root, key, val, 0);
     }
+
+    private Node get(Node x, String key, int d) {
+        if(x == null)   return null;
+        char c = key.charAt(d);
+        if(d == key.length() - 1)  return x;
+        if(c < x.c) return get(x.left, key, d);
+        else if(c > x.c) return get(x.right, key, d);
+        else return get(x.mid, key, d+1);
+    }
+
+    public Value get(String key) {
+        Node x = get(root, key, 0);
+        if(x == null) return null;
+        return x.val;
+    }
+
+    private Node delete(Node x, String key, int d) {
+        if(x == null)   return null;
+        if(d == key.length() - 1) {
+            x.val = null;
+        }
+        else {
+            char c = key.charAt(d);
+            if(c > x.c) x.right = delete(x.right, key, d);
+            else if(c < x.c) x.left = delete(x.left, key, d);
+            else x.mid = delete(x.mid, key, d+1);
+        }
+        if(x.val != null)   return x;
+
+        if( x.left != null 
+            || x.right != null
+            || x.mid != null ) {
+                return x;
+            }
+
+        return null;
+    }
+
+    public void delete(String key) {
+        root = delete(root, key, 0);
+    }
     
 }

@@ -27,7 +27,7 @@
  *      private void flipColors(Node);
  *      private Node moveLeft(Node);
  *      private Node moveRight(Node);
- *      private Node balance(Node);
+ *  --> private Node balance(Node);  
  *      private int height(Node);
  *      private Node min(Node);
  *      private Node max(Node);

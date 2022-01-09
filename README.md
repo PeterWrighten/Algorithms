@@ -178,7 +178,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 ### Tries
 
-- [ ] R-Way Trie: Trie Symbol Table
+- [x] R-Way Trie: Trie Symbol Table
 - [ ] Ternary Search Trie
 - [ ] Patricia Trie: Aka Crit-bit tree, radix tree.
 - [ ] Suffix Tree: Patricia trie of suffixes of a string.

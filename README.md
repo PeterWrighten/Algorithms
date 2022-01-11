@@ -189,6 +189,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] Knuth-Morris-Pratt
 - [ ] Boyer-Moore
 - [ ] Rabin-Karp
+- [ ] **Boggle**
 
 
 # Application Oriented Summary 

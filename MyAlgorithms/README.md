@@ -963,6 +963,23 @@ Now let's looking at Optimal Problem in Graph, which is much important in Discre
 
 
 
+## Part 2: Substring Search
+
+#### Knuth-Morris-Pratt
+
+**DFA**
+
+- Finite number of states (including start and halt).
+- Exactly one transition for each char in alphabet.
+- Accept if sequence of transitions leads to halt state.
+
+```java
+if in state j, reading char C:
+	if j is 6: halt and accept;
+	else: move to state dfa[c][j];
+```
+
+
 
 
 # **JAVA Syntax Memo**

@@ -183,12 +183,13 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] Patricia Trie: Aka Crit-bit tree, radix tree.
 - [ ] Suffix Tree: Patricia trie of suffixes of a string.
 
-### Substring Search
+### Substring Search[Skill: FSM]
 
 - [ ] Brute force
-- [ ] Knuth-Morris-Pratt
-- [ ] Boyer-Moore
-- [ ] Rabin-Karp
+- [ ] Knuth-Morris-Pratt Algorithm: DFA
+- [ ] KMP Algorithm: NFA
+- [ ] Boyer-Moore Algorithm: Skip
+- [ ] Rabin-Karp Fingerprint Algorithm
 - [ ] **Boggle**
 
 

@@ -965,7 +965,13 @@ Now let's looking at Optimal Problem in Graph, which is much important in Discre
 
 ## Part 2: Substring Search
 
+> Keypoint: Backup, misamtched characters.
+
 #### Knuth-Morris-Pratt
+
+*KMP is just a clever way to implement Brute Force. The essence is that utilizing restart state X to store next loop of Brute Force. (Avoid backup)*
+
+*It is just a simple Brute Force(Equivalent) which sync next step state.*
 
 **DFA**
 

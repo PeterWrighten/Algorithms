@@ -961,7 +961,7 @@ Now let's looking at Optimal Problem in Graph, which is much important in Discre
 
 # Lecture 10: String & Trie: Search
 
-
+## Part 1: String Symbol Table & Trie
 
 ## Part 2: Substring Search
 
@@ -975,6 +975,8 @@ Now let's looking at Optimal Problem in Graph, which is much important in Discre
 
 **DFA**
 
+Mealy State Machine. (Transition based on current state and input)
+
 - Finite number of states (including start and halt).
 - Exactly one transition for each char in alphabet.
 - Accept if sequence of transitions leads to halt state.
@@ -984,6 +986,14 @@ if in state j, reading char C:
 	if j is 6: halt and accept;
 	else: move to state dfa[c][j];
 ```
+
+# Lecture 11: String: Pattern Match & Compression
+
+**NFA**
+
+Nondeterministic Finate state Automaton.
+
+Moore State Machine.(Transition based on state.)
 
 
 

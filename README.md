@@ -195,6 +195,10 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 ## Week 9: String: Pattern Matching & Compression
 
+- [ ] NFA Simulation
+- [ ] Regular Expression
+
+
 
 # Application Oriented Summary 
 
@@ -253,4 +257,9 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |Seam Carving|Dijkstra's Algorithm|Photo Processing|
 |Compressed quad-tree for N-Body simulation|Patricia Trie|Trie|
 
+## Compiler
 
+|APP|Solution|Type|
+|:--:|:--:|:--:|
+|Symbol Table|Symbol Table|String|
+|javac|RE & NFA|String|

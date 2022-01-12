@@ -176,7 +176,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 ## Week 8: String & Tries: Search
 
-### Tries
+### Tries: String Symbol Table
 
 - [x] R-Way Trie: Trie Symbol Table
 - [x] Ternary Search Trie
@@ -189,8 +189,11 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] Knuth-Morris-Pratt Algorithm: DFA
 - [ ] KMP Algorithm: NFA
 - [ ] Boyer-Moore Algorithm: Skip
-- [ ] Rabin-Karp Fingerprint Algorithm
+- [ ] Rabin-Karp Fingerprint Algorithm: Monte Carlo
+- [ ] Rabin-Karp Fingerprint Algorithm: Las Vegas
 - [ ] **Boggle**
+
+## Week 9: String: Pattern Matching & Compression
 
 
 # Application Oriented Summary 

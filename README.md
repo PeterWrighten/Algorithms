@@ -196,6 +196,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 ## Week 9: String: Pattern Matching & Compression
 
 - [ ] NFA Simulation
+- [ ] NFA Construction
 - [ ] Regular Expression
 
 

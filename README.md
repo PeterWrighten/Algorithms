@@ -264,3 +264,4 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |:--:|:--:|:--:|
 |Symbol Table|Symbol Table|String|
 |javac|RE & NFA|String|
+|Regular Expression Engine|NFA|String|

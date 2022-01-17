@@ -227,6 +227,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |FileSystem|RedBlackTree|Symbol Table|
 |Scheduling|Topological Sort|DAG|
 |Search & Word Processing|Suffix Sort & Tries|String|
+|Stack Frame|Stack|Stack|
 
 ## Programming Language (Compiler)
 

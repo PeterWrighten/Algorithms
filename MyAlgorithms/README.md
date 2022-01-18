@@ -995,7 +995,25 @@ Nondeterministic Finate state Automaton.
 
 Moore State Machine.(Transition based on state.)
 
+**Building an NFA corresponding to an RE**
 
+- *States.*  Include a state for each symbol in the RE, plus an accept state.
+- *Concatenation.* Add **match-transition** edge from state corresponding to characters in the alphabet to next state.
+- *Parentheses.* Add **epsilon-transition** edge from parentheses to next state.
+- *closure.* Add three **epsilon-transition** edge for each * operator.
+- *Or.* Add two **epsilon-transition** edges for each | operator.
+
+**NFA construction**
+
+*Goal.* Write a program to build the epsilon-transition digraph.
+
+*Challenges.* Remember left parentheses to implement closure and or; remember | to implement or.
+
+*Solution.* Maintain a stack. (Like Dijkstra Machine)
+
+- ( symbol: push ( onto stack.
+- | symbol: push | onto stack.
+- ) symbol: pop corresponding ( and any intervening |; add epsilon-transition edges for closure/or.
 
 
 # **JAVA Syntax Memo**

@@ -205,6 +205,10 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 ### Part 2: Data Compression
 
+- [ ] Run-length encoding: JPEG
+- [ ] Huffman Compression
+- [ ] LZW Compression
+
 # Application Oriented Summary 
 
 ## Computer Graphics

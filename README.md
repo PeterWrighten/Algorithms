@@ -197,7 +197,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 - [ ] NFA Simulation
 - [ ] NFA Construction: Dijkstra Machine(Stack)
-- [ ] Regular Expression
+- [ ] Grep: Gneralized regular expression print
 
 
 
@@ -235,6 +235,10 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |:--:|:--:|:--:|
 |Mark-sweep Garbage Collection|Depth First Search|Digraph|
 |Cyclic inheritance|Depth First Search|DAG|
+|Symbol Table|Symbol Table|String|
+|javac|RE & NFA|String|
+|Regular Expression Engine|NFA|String|
+|Control Flow|DCG|DFS|
 
 ## Database
 
@@ -258,12 +262,6 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |Flooding|Depth First Search|Photo Processing|
 |Seam Carving|Dijkstra's Algorithm|Photo Processing|
 |Compressed quad-tree for N-Body simulation|Patricia Trie|Trie|
+|Grep|Generalized regular expression print|RE|
 
-## Compiler
 
-|APP|Solution|Type|
-|:--:|:--:|:--:|
-|Symbol Table|Symbol Table|String|
-|javac|RE & NFA|String|
-|Regular Expression Engine|NFA|String|
-|Control Flow|DCG|DFS|

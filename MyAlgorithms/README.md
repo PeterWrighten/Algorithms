@@ -1015,6 +1015,10 @@ Moore State Machine.(Transition based on state.)
 - | symbol: push | onto stack.
 - ) symbol: pop corresponding ( and any intervening |; add epsilon-transition edges for closure/or.
 
+**Appendix**
+
+[Regular Expression Matching](https://swtch.com/~rsc/regexp/regexp1.html)
+
 
 # **JAVA Syntax Memo**
 

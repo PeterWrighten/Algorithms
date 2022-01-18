@@ -183,7 +183,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [ ] Patricia Trie: Aka Crit-bit tree, radix tree.
 - [ ] Suffix Tree: Patricia trie of suffixes of a string.
 
-### Substring Search[Skill: FSM]
+### Substring Search: Pattern Matching [Skill: FSM]
 
 - [ ] Brute force
 - [ ] Knuth-Morris-Pratt Algorithm: DFA
@@ -195,11 +195,15 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 ## Week 9: String: Pattern Matching & Compression
 
+### Part 1: Regular Expression
+
 - [ ] NFA Simulation
 - [ ] NFA Construction: Dijkstra Machine(Stack)
 - [ ] Grep: Gneralized regular expression print
+- [ ] Java's Validity Checking
+- [ ] Harvester
 
-
+### Part 2: Data Compression
 
 # Application Oriented Summary 
 

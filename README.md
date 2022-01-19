@@ -14,7 +14,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |Sort| **Array, BinaryHeap;** Quicksort, Mergesort, Heapsort|
 |Search|***Symbol Table:*** <br>**LinkedList, BST, Red-Black BST, HashTable**|
 |**Graphs**|***Search:*** BFS, DFS, Topological Sort, Components; <br> <br> ***Optimize:*** Shortest Path, Minimum Spanning Tree, Maxflow & Mincut|
-|**Strings**|**Suffix Array**, Radix Sorts, **Suffixes Tree**, **Tries**, KMP, Regexps, Data Compression|
+|**Strings**|**Suffix Array**, Radix Sorts, **Suffixes Tree**, **Tries**, KMP, Regexps, Data Compression, **Huffman Trie**|
 |Advanced| B-Trees, Suffix Array, Maxflow|
 
 # Todo List
@@ -207,7 +207,22 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 - [ ] Run-length encoding: JPEG, Bitmap.
 - [ ] Huffman Trie: Huffman Compression and expansion.
+- [ ] Huffman Algorithm: Huffman Encoding Trie
+- [ ] [Option] Shannon-Fano Algorithm: Not Optimal
 - [ ] LZW Compression
+- [ ] **Burrows-Wheeler**
+
+## Week 10: Problem-Solving Model
+
+### Part 1: Reduction
+
+- [ ] Convex Hull
+- [ ] Graham scan
+- [ ] SPT Scheduling
+
+### Part 2: Linear Programming
+
+- [ ] Simplex Algorithm
 
 # Application Oriented Summary 
 
@@ -247,6 +262,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |javac|RE & NFA|String|
 |Regular Expression Engine|NFA|String|
 |Control Flow|DCG|DFS|
+|Compiler Register Allocation|BFS|Linear Programming|
 
 ## Database
 
@@ -271,5 +287,6 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |Seam Carving|Dijkstra's Algorithm|Photo Processing|
 |Compressed quad-tree for N-Body simulation|Patricia Trie|Trie|
 |Grep|Generalized regular expression print|RE|
+|Achiever|LZW/Huffman/Run-length|Data Compression|
 
 

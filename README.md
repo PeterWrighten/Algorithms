@@ -288,5 +288,6 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |Compressed quad-tree for N-Body simulation|Patricia Trie|Trie|
 |Grep|Generalized regular expression print|RE|
 |Achiever|LZW/Huffman/Run-length|Data Compression|
+|Tree|DFS|Graph|
 
 

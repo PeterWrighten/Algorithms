@@ -4,7 +4,7 @@ The Lecture Note About Algorithms.
 
 ## Tips
 
-If you wanna run programs in each part(folder), it is necessary to add ```-cp [classpath]``` flag when compiling.
+If you wanna run programs in each part(folder), it is necessary to add ``-cp [classpath]`` flag when compiling.
 
 For example:
 
@@ -13,7 +13,6 @@ $ java -cp [classpath] [filename].java
 ```
 
 # Lecture 1: Union-Find
-
 
 Union Find could be modelized as a dynamic connectivity problem.
 
@@ -28,12 +27,11 @@ Union Find could be modelized as a dynamic connectivity problem.
 - Reflexive: p is connected to p.
 - Symmetric: if p-q is connected, also q-p.
 - Transmitive: if p-q, q-r, thus p-r.
-
 - connected components.
 
 ## Quick Find
 
-Connected node i's ```id[i]``` are all equal.
+Connected node i's ``id[i]`` are all equal.
 
 ```java
  public boolean find(int p, int q){
@@ -41,20 +39,18 @@ Connected node i's ```id[i]``` are all equal.
  }
 ```
 
-|algo|init|union|find|
-|:--:|--:|--:|--:|
-|quick find| N  | N  | 1  |
-
-
+|    algo    | init | union | find |
+| :--------: | ---: | ----: | ---: |
+| quick find |    N |     N |    1 |
 
 ## Quick Union
 
 **Interpreter**
 
-- ```id[i]``` is i's parent.
-- root of i is ```id[id[...id[i]...]]```
+- ``id[i]`` is i's parent.
+- root of i is ``id[id[...id[i]...]]``
 
-```union(p,q) => id[root(p)] = root(q);```
+``union(p,q) => id[root(p)] = root(q);``
 
 ## Quick Union+
 
@@ -62,20 +58,20 @@ Connected node i's ```id[i]``` are all equal.
 
 It could avoid the worst case.
 
-use ```sz[i]``` in union.
+use ``sz[i]`` in union.
 
-```O() < lgN```
+``O() < lgN``
 
 **Paths compression**
 
-use ```id[i] = id[id[i]]``` in ```root()```.
+use ``id[i] = id[id[i]]`` in ``root()``.
 
-```O() < N + MlgN```<- Proved by Tjan, and I would discuss about it in my blog later.
+``O() < N + MlgN``<- Proved by Tjan, and I would discuss about it in my blog later.
 
-|algo|init|union|find|
-|:--:|--:|--:|--:|
-|quick union(worst)| N  | N  | N  |
-|quick union+ |  N | N+MlgN  | N+MlgN  |
+|        algo        | init |  union |   find |
+| :----------------: | ---: | -----: | -----: |
+| quick union(worst) |    N |      N |      N |
+|    quick union+    |    N | N+MlgN | N+MlgN |
 
 # Lecture 2: The Analysis of Algorithms
 
@@ -102,25 +98,31 @@ Stopwatch();//Princeton STL
 
 **Mathematic Model**
 
-$$RunningTime = Frequency \times Cost$$
-
+$$
+RunningTime = Frequency \times Cost
+$$
 
 > Simplifying the calculations
 
 * Cost Model
-Use some basic operation as a proxy for running time.
-
+  Use some basic operation as a proxy for running time.
 * Tilde Notation
-Estimate running time (or memory) as a function of input size N.
+  Estimate running time (or memory) as a function of input size N.
 
 Ignore lower order terms.
+
 - when N is large, terms are negligible.
 - when N is small, we don't care.
 
 Estimate as Discrete Math Model:
 
-$$\sum_N i = \int_0^N xdx = \sim N^2$$
-$$\sum_N\sum_N\sum_N i= \int_0^N (\int_0^z (\int_0^yxdx)dy)dz = \sim N^4$$
+$$
+\sum_N i = \int_0^N xdx = \sim N^2
+$$
+
+$$
+\sum_N\sum_N\sum_N i= \int_0^N (\int_0^z (\int_0^yxdx)dy)dz = \sim N^4
+$$
 
 **Order-of-growth**
 
@@ -130,28 +132,26 @@ $1, \log N, N, NlogN, N^2, N^3,$ and $2^N$
 
 suffices to describe ordered-of-growth of typical algorithms.
 
-![picture 1](images/b8cd9fbc89fb5d7a11b0ea95e64bc5dfff4ae2335e1835c5495379576d1ae2e6.jpg)  
-
+![picture 1](images/b8cd9fbc89fb5d7a11b0ea95e64bc5dfff4ae2335e1835c5495379576d1ae2e6.jpg)
 
 * Common order-of-growth classifications
 
-|Order of Growth|Name|Typical code framework|description|example|
-|:--:|:--:|--:|--:|--:|
-|1   |  Constant |  ```a += b``` | statement  | add two numbers  |
-|$\log N$   | Logarithmic  | ```while(N > 1){N = N / 2;...}```  |  divide in half | BinarySearch  |
-| N  |  Linear | ```for(i = 0; i < N){...;}```  | loop  | find max/min   |
-|$N\log N$   |  Linearithmic |  mergesort | divide and conquer  |  mergesort |
-|$N^2$   | Quadratic  | double loop  |  double loop | check all pairs  |
-|$N^3$   | Cubic  |  triple loop | triple loop  |  check all triples |
-|$2^N$   | exponential  | combinatorial search  | exhaustive search  |  check all subsets |
-
+| Order of Growth |     Name     |          Typical code framework |        description |           example |
+| :-------------: | :----------: | ------------------------------: | -----------------: | ----------------: |
+|        1        |   Constant   |                      ``a += b`` |          statement |   add two numbers |
+|   $\log N$   | Logarithmic | ``while(N > 1){N = N / 2;...}`` |     divide in half |      BinarySearch |
+|        N        |    Linear    |     ``for(i = 0; i < N){...;}`` |               loop |      find max/min |
+|   $N\log N$   | Linearithmic |                       mergesort | divide and conquer |         mergesort |
+|     $N^2$     |  Quadratic  |                     double loop |        double loop |   check all pairs |
+|     $N^3$     |    Cubic    |                     triple loop |        triple loop | check all triples |
+|     $2^N$     | exponential |            combinatorial search |  exhaustive search | check all subsets |
 
 **Theory of Algorithms**
 
-|Upper Bound(Big Oh)|
-|:--:|
-|**Optimal Algo(Tilde Notation, Big theta)**   |
-|**Lower Bound(Big Omega)**   |
+|                Upper Bound(Big Oh)                |
+| :-----------------------------------------------: |
+| **Optimal Algo(Tilde Notation, Big theta)** |
+|         **Lower Bound(Big Omega)**         |
 
 **Memory**
 
@@ -163,7 +163,7 @@ suffices to describe ordered-of-growth of typical algorithms.
 
 > Typical Memory usage summary
 
->Total memory usage for a data type value:
+> Total memory usage for a data type value:
 
 * Primitive type: 4 bytes for int, 8 bytes for double,...
 * Object reference: 8 bytes.
@@ -171,32 +171,34 @@ suffices to describe ordered-of-growth of typical algorithms.
 * Object: 16 bytes + memory for each instance variable + 8 bytes if inner class(for pointer to enclosing class)
 * Padding: round up to multiple of 8 bytes.
 
->Shallow memory usage: Don't count referenced objects.
+> Shallow memory usage: Don't count referenced objects.
 
->Deep memory usage: If array entry or instance variable is a reference, add memory(recursively) for referenced object.
-
+> Deep memory usage: If array entry or instance variable is a reference, add memory(recursively) for referenced object.
 
 # Lecture 3: Stacks and Queues
 
 ## Stack
-- ```push()```: Tail is NULL
+
+- ``push()``: Tail is NULL
 
 ### Implementation
 
->Resizing Array --> Space Efficiency
+> Resizing Array --> Space Efficiency
 
->Linked-List --> Time Efficiency
+> Linked-List --> Time Efficiency
 
 - Resizing Array
 
->Resize stragedy:
+> Resize stragedy:
+
 1. When N == s.length, double;
 2. When N == s.length/4, half;
-3. s.length / 4 < N < s.length; 
+3. s.length / 4 < N < s.length;
 
-* Point: 
+* Point:
 
 1. push()
+
 ```java
 public void push(T item){
 	if(N == s.length){
@@ -232,12 +234,11 @@ public void resize(int cap){
 }
 ```
 
-
 - Linked List
 
 * Point:
 
-1. push(item): 
+1. push(item):
 
 ```java
 public void push(T item){
@@ -248,6 +249,7 @@ public void push(T item){
 }
 
 ```
+
 2. pop()
 
 ```java
@@ -266,8 +268,6 @@ public void pop(){
 
 * Enqueue(): first = last;
 * Dequeue(): last = first;
-
-
 
 ## JAVA's Generic
 
@@ -292,8 +292,8 @@ public class Demo{
 		//
 	   
 	}
-		
 	
+
 }
 
 
@@ -302,11 +302,11 @@ public class Demo{
 **Good Code has Zero Cast.**
 
 > Primitives all have Wrapper Type.
-**i.e.:** int has a wrapper type called Integer
+> **i.e.:** int has a wrapper type called Integer
 
->AutoBoxing: Automatic cast between primitives and wrappers
+> AutoBoxing: Automatic cast between primitives and wrappers
 
->Syntactic Sugar: Behind-the-scenes casting
+> Syntactic Sugar: Behind-the-scenes casting
 
 ## Java's API
 
@@ -335,7 +335,6 @@ public class Bag<item> implements Iterable<item>{
 2. Right Parenthesis: Operate
 3. Value: push into value stack
 4. Operator: push into operator stack
-
 
 **Syntax Memo**
 
@@ -402,14 +401,14 @@ while( h > 0 )//change increment
 				swap(j, j - h);
 			}
 		}
-		
+	
 	}
 	h = h / 3;
 }
 
 ```
 
->Why insertion sort?
+> Why insertion sort?
 
 - Big increments => small subarray
 - Small increments => nearly in order
@@ -420,7 +419,6 @@ while( h > 0 )//change increment
 
 1. Why increment h = 3h + 1 ?
 2. Why O(N^3/2) ?
-
 
 **Shuffling**
 
@@ -445,7 +443,6 @@ while( h > 0 )//change increment
 - Pass through array, merging subarrays of size 1.
 - Repeat for subarrays of size 2, 4, 8...
 
-
 ## Quicksort
 
 **Basic Plan**
@@ -459,19 +456,17 @@ while( h > 0 )//change increment
 
 **Partition**
 
->Repeat until i and j pointers cross
+> Repeat until i and j pointers cross
 
 - Scan i from left to right so long as (a[i] < a[lo]).
 - Scan j from right to left so long as (a[j] > a[lo]).
 - Exchange a[i] with a[j].
 
->When pointers cross
+> When pointers cross
 
 - Exchange a[lo] with a[j].
 
 **Dijkstra 3-Way Quicksort**
-
-
 
 ### Java's sort
 
@@ -484,32 +479,31 @@ Arrays.sort(a);
 
 ```
 
-
 ### JAVA Syntax
 
 > Implement "swap" func in JAVA
 
 1. Definite out of  Method(in the class)
-2. Definite in obj(```int[], String[]```)
+2. Definite in obj(``int[], String[]``)
 
 # Lecture 5: Priority queue
 
->Collection: 
+> Collection:
 
 Insert and delete items.
-  
->Delete:
+
+> Delete:
 
 - Stack: Remove the item most recently added
 - Queue: Remove the item least recently added
 - Randomized Queue: Remove a random item
 - Priority queue: Remove the largest(or Samllest) item
 
->Priority Queue
+> Priority Queue
 
 - Unordered: Insert: O(1), Delmax: O(N), Max: O(N)
 - Ordered: 	Insert: O(N), Delmax: O(1), Max: O(1)
-  
+
 ## Binary Heap
 
 - Binary Tree & Parents >(<) Children
@@ -543,14 +537,13 @@ Key-value pair abstraction.
 **Convention**
 
 - Values are not null.
-- Method ```get()``` returns ```null``` if key not present.
-- Method ```put()``` overwrites old value with new value.
+- Method ``get()`` returns ``null`` if key not present.
+- Method ``put()`` overwrites old value with new value.
 
 **Intended Consequences**
 
-- Easy to implement ```contains()```
-- Can implement lazy version of ```delete()```.
-
+- Easy to implement ``contains()``
+- Can implement lazy version of ``delete()``.
 - Equal (x.equal(y)(PS: Non-Null)) for objects
 
 ## Elementary Table
@@ -558,7 +551,6 @@ Key-value pair abstraction.
 > Only 1 to 1
 
 - Associative array Abstractions
-
 
 > Sequential search in a linked list
 
@@ -574,7 +566,6 @@ In computer science, a symbol table is a data structure used by a language trans
 
 Correspondence betweeen QuickSort's Partition & BinarySearch Tree: 1-1
 
-
 ## 2-3 Tree and Red-Black Tree (The Derivative of 2-3 Tree)[Weak Balance]
 
 In there, I just wanna talk about Red Black Tree.
@@ -589,7 +580,7 @@ In there, I just wanna talk about Red Black Tree.
 
   Red Black Tree and 2-3 Tree only support **insert and search** functions which could guarantee the balance. The deletion machanism is implemented by **Hibbard deletion**, which tends to make balance crash.
 
-  > Update: You could perfectly trick this problem by using ```moveRedLeft(Node)``` and ```moveRedRight(Node)``` API.
+> Update: You could perfectly trick this problem by using ``moveRedLeft(Node)`` and ``moveRedRight(Node)`` API.
 
 **Deletion**
 
@@ -601,11 +592,11 @@ The discussion about how to delete in RedBlack BST is [here](https://peterwright
 
 > Recursive Definition
 
-N.Height equals: 
+N.Height equals:
 
-1. if N is a leaf: 
+1. if N is a leaf:
 
-```1 + max(N.left.Height, N.right.Height)```
+``1 + max(N.left.Height, N.right.Height)``
 
 ```cpp
 
@@ -623,16 +614,16 @@ class Node{
 
 AVL trees maintain the following property:
 
-For all nodes N, 
+For all nodes N,
 
-```|N.left.Height - N.right.Height| <= 1```
+``|N.left.Height - N.right.Height| <= 1``
 
 **Implementation**
 
 ```cpp
 AVLInsert(k, R) {
 	insert(k, R);
-		
+	
 	rebalance(R);
 
 }
@@ -642,19 +633,17 @@ AVLInsert(k, R) {
 
 **1d Range Search**
 
->Unordered Array: 
+> Unordered Array:
 
 Range Count & Search: O(N) <-- Sequential Search
 
 > Ordered Array:
 
-Range Count & Search: O(logN) <-- Binary Search for ```lo``` & ```hi```.
-
-
+Range Count & Search: O(logN) <-- Binary Search for ``lo`` & ``hi``.
 
 ### Line Segment Intersection
 
-> Sweep-Line Analysis 
+> Sweep-Line Analysis
 
 **Sweep vertical line from left to right.**
 
@@ -662,7 +651,6 @@ Range Count & Search: O(logN) <-- Binary Search for ```lo``` & ```hi```.
 - h-segment(left endpoint): insert y-coordinate into BST.
 - h-segment(right endpoint): remove y-coordinate from BST.
 - v-segment: range search for interval of y-endpoints.
-
 
 ### Kd Tree: Video Game
 
@@ -676,11 +664,7 @@ Range Count & Search: O(logN) <-- Binary Search for ```lo``` & ```hi```.
 
 - Left Endpoint is Key.
 
-
 ### Rectangle Intersection Search: Microprocessor Design
-
-
-
 
 ## Hash Table
 
@@ -690,11 +674,11 @@ Hash Table is other type of Symbol Table implementation which is distinct with B
 
 Each key is equally likely to hash to an integer between 0 and M-1.
 
-### Hash Functions 
+### Hash Functions
 
-**JAVA Implementation: ```hash()``` & ```hashCode()```**
+**JAVA Implementation: ``hash()`` & ``hashCode()``**
 
-```java 
+```java
 public final class PseudoString {
     private int hash = 0;
     private final char[] s;
@@ -704,7 +688,7 @@ public final class PseudoString {
         for(int i = 0; i < length(); i++) 
             h = s[i] + (31 * h);
         hash = h;
-        return h;       
+        return h;     
     }
     //...
 }
@@ -720,20 +704,17 @@ public final class PseudoString {
 
 ##### Rehashing
 
-
-
 > Hash Table & BSTs API in JAVA
 
-1. Hash Table: ```java.util.HashMap```, ```java.util.IdentityHashMap```
-2. Red-Black Tree: ```java.util.TreeMap```, ```java.util.TreeSet```
-
+1. Hash Table: ``java.util.HashMap``, ``java.util.IdentityHashMap``
+2. Red-Black Tree: ``java.util.TreeMap``, ``java.util.TreeSet``
 
 # Lecture 7: Graph & Search
 
 **Some Graph-Processing Problems**
 
-- Path. Is there a path between ```s``` and ```t``` ?
-- Shortest path. What is the shortest path between ```s``` and ```t``` ?
+- Path. Is there a path between ``s`` and ``t`` ?
+- Shortest path. What is the shortest path between ``s`` and ``t`` ?
 - Cycle. Is there a cycle in the graph ?
 - Euler tour. Is there a cycle that uses each edge exactly once ?
 - Hamilton tour. Is there a cycle that uses each vertex exactly once?
@@ -754,14 +735,14 @@ public class Graph {
 	Graph(In in); // Create a graph from input stream 
 
 	void addEdge(int v, int w); // add an edge v-w
-	
+
 	Iterable<Integer> adj(int v); // vertices adjacent to v 
 
 	int V(); // number of vertices.
 
 	int E(); // number of edges.
 
-	String toString(); // String representation.	
+	String toString(); // String representation.
 
 	public static void main(String[] args) {
 		In in = new In(args[0]);
@@ -777,11 +758,11 @@ public class Graph {
 }
 ```
 
-### Graph-Processing Algorithms 
+### Graph-Processing Algorithms
 
 - **Design Pattern For Graph Processing**
 
-Decouple graph data type from graph processing. 
+Decouple graph data type from graph processing.
 
 - Create a Graph object.
 - Pass the Graph to a graph-processing routine.
@@ -798,7 +779,6 @@ public class Paths {
 
 ```
 
-
 #### Depth-First Search(Put unvisited vertices on a stack)
 
 - Goal: Systematically search through a graph.
@@ -812,7 +792,7 @@ Marked v as visited.
 Recursively visit all unmarked vertices w adjacent to v.
 ```
 
-- Typical application: 
+- Typical application:
 
 Find all vertices connected to a given source vertex;
 
@@ -821,7 +801,6 @@ Find a path between two vertices.
 #### Breadth-First Search(Put unvisited vertices on a queue)
 
 - Shortest path(Bellman-Ford): Find path from s to t that uses fewest number of edges.
-
 
 ```java
 BFS(From source vertex s)
@@ -849,7 +828,7 @@ For each unmarked vertex v, run DFS to identify all vertices discovered as part 
 
 ## Directed Graph (Digraph)
 
-**Digraph API** is almost same as **Graph API** besides the ```addEdge(int, int)``` part.
+**Digraph API** is almost same as **Graph API** besides the ``addEdge(int, int)`` part.
 
 ### Direected BFS (Same as Undirected Graph)
 
@@ -877,7 +856,6 @@ Solution.[BFS with implicit digraph]
 - Path finding
 - Directed Cycle detection
 - Topological Sort
-
 
 #### Topological Sort
 
@@ -908,7 +886,7 @@ Topological sort
 - Java Compiler: Cyclic inheritance
 - Microsoft Excel: Spreadsheet recalculation.
 
-#### Strongly-connected components 
+#### Strongly-connected components
 
 **Strongly connected**
 
@@ -930,12 +908,12 @@ Def. A strong component is a maximal subset of strongly-connected vertices.
 
 *Kernal DAG.* Contract each strong component into a single vertex.
 
-*Idea.* 
+*Idea.*
 
 - Compute topological order(reverse postorder) in kernel DAG.
 - Run DFS, considering vertices in reverse topological order.
 
-![picture 2](../images/6e6026a72e0149a08254890dae7f5e7697a09ab0913ddc0a14dd219b81ac147d.jpg)  
+![picture 2](../images/6e6026a72e0149a08254890dae7f5e7697a09ab0913ddc0a14dd219b81ac147d.jpg)
 
 ```java
 Kosaraju-Sharir Algorithm 
@@ -946,18 +924,15 @@ Phase 2. Run DFS in G, visiting unmarked vertices in reverse postorder of G'.
 
 *PS.*  The DFS in the first phase is crucial. The phase 2 is trival as long as the algorithms could mark the set of vertices reachable.
 
-
 # Lecture 8: Graph & Optimize
 
 Now let's looking at Optimal Problem in Graph, which is much important in Discrete Math & Computer Science.
 
 ## Minimum Spanning Tree
 
-
 # Lecture 9: String & Sort
 
 ## Counting Sort
-
 
 # Lecture 10: String & Trie: Search
 
@@ -1019,10 +994,9 @@ Moore State Machine.(Transition based on state.)
 
 [Regular Expression Matching](https://swtch.com/~rsc/regexp/regexp1.html)
 
-
 # **JAVA Syntax Memo**
 
-> -> About Iterable<T> & Iterator<T>
+> -> About Iterable`<T>` & Iterator`<T>`
 
 ```java
 public interface Iterable<T> {
@@ -1042,11 +1016,9 @@ Interface like this is convenient to definite ReversedIterator & Iterator in seq
 
 > Iterable
 
-- In Java Containers, all Subclass of Collection would use ```Iteratable``` interface to implement ```for each``` functions.
+- In Java Containers, all Subclass of Collection would use ``Iteratable`` interface to implement ``for each`` functions.
 
- ![picture 2](images/123f02da696f17a016a6e4d6df8f7c96edf488d3b87dbff3f5a1737ca102daa6.png)  
-
-
+ ![picture 2](images/123f02da696f17a016a6e4d6df8f7c96edf488d3b87dbff3f5a1737ca102daa6.png)
 
 ```java
 
@@ -1058,7 +1030,7 @@ public class demo<T> implements Iterable<T> {
 	}
 
 	private class demoIterator implements Iterator<T> {
-	
+
 		private int current = 0; 
 
 		@Override
@@ -1099,16 +1071,17 @@ private static class Node {/* Must be an static class */
 }
 ```
 
-> Queue<T> is just a implements;
+> Queue`<T>` is just a implements;
 
-To utilize ```Queue<T>```, We should initialize it like following:
+To utilize ``Queue<T>``, We should initialize it like following:
 
 ```java
 Queue<T> q = new LinkedList<T>();
 q.add(T);
 q.remove();
 ```
-> Same Package's Compile 
+
+> Same Package's Compile
 
 When you wanna compile file in the same package, you should add classpath when compiling. i.e:
 
@@ -1118,7 +1091,7 @@ When you wanna compile file in the same package, you should add classpath when c
 
 > Reverse Set
 
-You could use ```Collections.reverse()``` to reverse.
+You could use ``Collections.reverse()`` to reverse.
 
 ```java
 import java.util.Collections;
@@ -1166,5 +1139,4 @@ public:
 > Java Programming Method
 
 - Recursive-instance method.
-
 - Static: for all classes, not just current class.(Not allowed to use generic creation.)

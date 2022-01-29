@@ -15,7 +15,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 |Search|***Symbol Table:*** <br>**LinkedList, BST, Red-Black BST, HashTable**|
 |**Graphs**|***Search:*** BFS, DFS, Topological Sort, Components; <br> <br> ***Optimize:*** Shortest Path, Minimum Spanning Tree, Maxflow & Mincut|
 |**Strings**|**Suffix Array**, Radix Sorts, **Suffixes Tree**, **Tries**, KMP, Regexps, Data Compression, **Huffman Trie**|
-|Advanced| B-Trees, Suffix Array, Maxflow|
+|Advanced| **B-Trees**, Suffix Array, FFT|
 
 # Todo List
 

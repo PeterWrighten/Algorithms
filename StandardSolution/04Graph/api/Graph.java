@@ -2,6 +2,7 @@ package api;
 
 import api.Bag;
 import java.util.NoSuchElementException;
+import java.lang.IllegalArgumentException;
 
 public class Graph {
     private static final String NEWLINE = System.getProperty("line.separator");
@@ -26,7 +27,7 @@ public class Graph {
     public int E() { return E; }
 
     private void validateVertex(int v) {
-        if(v < 0 || v >= V) throw new IllegalArgException("vertex" + v + "is not between 0 and " + (V - 1));
+        if(v < 0 || v >= V) throw new IllegalArgumentException("vertex" + v + "is not between 0 and " + (V - 1));
     }
 
     public void addEdge(int v, int w) {
@@ -37,7 +38,7 @@ public class Graph {
         adj[w].add(v);
     }
 
-    public Iterable<Bag<Integer>> adj(int v) {
+    public Iterable<Integer> adj(int v) {
         validateVertex(v);
         return adj[v];
     }

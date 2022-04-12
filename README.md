@@ -108,7 +108,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 - [x] Graph API
 - [x] Depth-First Search
 - [x] Breadth-First Search
-- [ ] ConnectedComponents
+- [x] ConnectedComponents
 
 ### Part 2: Directed Graph
 

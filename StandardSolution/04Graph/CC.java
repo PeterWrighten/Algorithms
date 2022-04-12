@@ -70,7 +70,9 @@ public class CC {
         id[v] = count;
         size[count]++;
         for(int w: G.adj(v)) {
-            dfs(G, w);
+           if(!marked[w]){
+               dfs(G, w);
+           }
         }
     }
 }

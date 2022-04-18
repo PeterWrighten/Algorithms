@@ -2,7 +2,11 @@
  * 
  * public class KMP:
  *      private final int R;
- *      
+ *      private final int S;
+ *      private int[][] dfa;
+ * 
+ *      public KMP(String pat);
+ *      public search(String txt);
  * 
  ****************************************************************/
 

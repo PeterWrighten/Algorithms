@@ -23,6 +23,7 @@ This Repo would focus on reimplementing excellent Java Code of [Princeton Algori
 
 ## PART 5: Strings
 
+- [x] KMP
 - [ ] TrieST
 - [ ] Huffman: Data Compression.
 

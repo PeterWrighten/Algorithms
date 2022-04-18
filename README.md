@@ -187,7 +187,7 @@ All Algorithms' implementations(Obviously, without HW) has standard solutions in
 
 - [ ] Brute force
 - [ ] Knuth-Morris-Pratt Algorithm: DFA
-- [ ] KMP Algorithm: NFA
+- [x] KMP Algorithm: NFA
 - [ ] Boyer-Moore Algorithm: Skip
 - [ ] Rabin-Karp Fingerprint Algorithm: Monte Carlo
 - [ ] Rabin-Karp Fingerprint Algorithm: Las Vegas

@@ -331,6 +331,8 @@ public class Bag<item> implements Iterable<item>{
 
 **Dijkstra's Two Stack Algorithms**
 
+> Ubiquitously used in Compiler Design
+
 1. Left Parenthesis: Ignore
 2. Right Parenthesis: Operate
 3. Value: push into value stack
@@ -930,6 +932,8 @@ Now let's looking at Optimal Problem in Graph, which is much important in Discre
 
 ## Minimum Spanning Tree
 
+## MinCut and Maxflow
+
 # Lecture 9: String & Sort
 
 ## Counting Sort
@@ -946,7 +950,7 @@ Now let's looking at Optimal Problem in Graph, which is much important in Discre
 
 *KMP is just a clever way to implement Brute Force. The essence is that utilizing restart state X to store next loop of Brute Force. (Avoid backup)*
 
-*It is just a simple Brute Force(Equivalent) which sync next step state.*
+*It is just a simple Brute Force(Equivalent) which async next step state.*
 
 **DFA**
 
@@ -960,6 +964,42 @@ Mealy State Machine. (Transition based on current state and input)
 if in state j, reading char C:
 	if j is 6: halt and accept;
 	else: move to state dfa[c][j];
+```
+
+The implementation of NFA version's KMP:
+
+```cpp
+void GetNext(string Pat, vector<int>& Next) {
+	int cur = 0, backup = -1; 
+	/* next[k] = the number of public suffix and prefix when in k th character */
+	Next[cur] = backup;
+	while(cur < Pat.length() - 1) {
+		if(backup == -1 || Pat[cur] == Pat[backup]) {
+			Next[++cur] = ++backup;
+		} else {
+			backup = Next[backup];
+		}
+	}
+}
+
+int KMP(string Pat, string Txt, vector<int>& Next) {
+	int pos = 0;
+	int num = 0;
+	while(pos < Txt.length() && num < Pat.length()) {
+		if(num == -1 || Pat[num] == Txt[pos]) {
+			num++;
+			pos++;
+		} else {
+			num = Next[num];
+		}
+	}
+
+	if(num == Pat.length()) {
+		return pos - num;
+	} else {
+		return -1;
+	}
+}
 ```
 
 # Lecture 11: String: Pattern Match & Compression

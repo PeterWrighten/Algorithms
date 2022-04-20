@@ -1004,6 +1004,8 @@ int KMP(string Pat, string Txt, vector<int>& Next) {
 
 # Lecture 11: String: Pattern Match & Compression
 
+## String: Pattern Match
+
 **NFA**
 
 Nondeterministic Finate state Automaton.
@@ -1030,11 +1032,24 @@ Moore State Machine.(Transition based on state.)
 - | symbol: push | onto stack.
 - ) symbol: pop corresponding ( and any intervening |; add epsilon-transition edges for closure/or.
 
+
+## Compression
+
+**Bitmaps**
+
+**Huffman Trie and Algorithms**
+
+**LZW Compression**
+
+**Burrows Wheeler**
+
+**FFT**
+
 **Appendix**
 
 [Regular Expression Matching](https://swtch.com/~rsc/regexp/regexp1.html)
 
-# **JAVA Syntax Memo**
+# JAVA Syntax Memo
 
 > -> About Iterable`<T>` & Iterator`<T>`
 

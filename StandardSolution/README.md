@@ -18,6 +18,9 @@ This Repo would focus on reimplementing excellent Java Code of [Princeton Algori
 - [ ] RedBlack BST
 
 ## PART 4:Graphs
+
+- [x] Digraph
+- [x] NonRecursive DFS
 - [x] Connecteed Component
 - [ ] PrimMST
 

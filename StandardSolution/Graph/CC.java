@@ -14,8 +14,9 @@
  * 
  ************************************************************************************************/
 
+package Graph;
 
-import api.Graph;
+import Graph.api.Graph;
 import java.lang.IllegalArgumentException;  
 
 

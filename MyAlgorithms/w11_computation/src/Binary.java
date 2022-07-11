@@ -14,6 +14,19 @@ public class Binary {
         }
     }
 
+    private int qpow(int a, int n) {
+        int ans = 1;
+        while(n) {
+            if(n & 1) {
+                ans *= a;
+            }
+            a *= a;
+            n >>= 1;
+        }
+        return ans;
+    }
+
+
     public int quickPow(int a, int n) {
         return binary_recur(a, n);
     }

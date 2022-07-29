@@ -1,5 +1,11 @@
-**/.DS_Store
-**/.vscode
-**/.idea
-**/*.iml
-**/*.class
+.DS_Store
+
+.vscode
+
+.idea
+
+*.iml
+
+*.class
+
+a.out

@@ -12,6 +12,8 @@ class Graph {
             edge(int v, int w) : v(v), w(w) {}
         };
         vector<vector<edge> > Adj;
+        vector<int> dis;
+        vector<int> vis;
 
     public:
         Graph(int v): v(v) {
@@ -27,6 +29,7 @@ class Graph {
         vector<edge> adj(int u) {
             return Adj[u];
         }
+        vector<int> dijkstra(Graph&, int);
 };
 
 void Graph::add_edge(int u, int v, int w) {
@@ -38,10 +41,8 @@ void Graph::add_edge(int u, int v, int w) {
 }
 
 
-vector<int> dijkstra(Graph& g, int s) {
-    vector<int> dis(g.V(), INT_MAX);
+vector<int> Graph::dijkstra(Graph& g, int s) {
     dis[s] = 0;
-    vector<int> vis(g.V(), 0);
     // pair<dis, ver>
     priority_queue<pair<int, int>, vector<pair<int, int> >, greater<pair<int, int> > > heap;
     pair<int, int> tmp = make_pair(0, s);
@@ -83,7 +84,7 @@ int main() {
         g.add_edge(u, v, w);
     }
     cout << "2. Dijkstra" << endl;
-    vector<int> dis = dijkstra(g, 0);
+    vector<int> dis = g.dijkstra(g, 0);
     for(int i = 0; i < dis.size(); i++) {
         cout << "to vertex " << i << ": " << dis[i] << endl;
     }

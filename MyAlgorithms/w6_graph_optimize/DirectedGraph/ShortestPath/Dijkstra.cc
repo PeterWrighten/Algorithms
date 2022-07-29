@@ -12,8 +12,6 @@ class Graph {
             edge(int v, int w) : v(v), w(w) {}
         };
         vector<vector<edge> > Adj;
-        vector<int> dis;
-        vector<int> vis;
 
     public:
         Graph(int v): v(v) {
@@ -29,7 +27,6 @@ class Graph {
         vector<edge> adj(int u) {
             return Adj[u];
         }
-        vector<int> dijkstra(Graph&, int);
 };
 
 void Graph::add_edge(int u, int v, int w) {
@@ -41,12 +38,13 @@ void Graph::add_edge(int u, int v, int w) {
 }
 
 
-vector<int> Graph::dijkstra(Graph& g, int s) {
+vector<int> dijkstra(Graph& g, int s) {
+    vector<int> dis(g.V(), INT_MAX);
+    vector<int> vis(g.V(), 0);
     dis[s] = 0;
     // pair<dis, ver>
     priority_queue<pair<int, int>, vector<pair<int, int> >, greater<pair<int, int> > > heap;
-    pair<int, int> tmp = make_pair(0, s);
-    heap.push(tmp);
+    heap.push(make_pair(0, s));
     while(!heap.empty()) {
         int u = heap.top().second;
         heap.pop();
@@ -56,9 +54,8 @@ vector<int> Graph::dijkstra(Graph& g, int s) {
             int v = ed.v;
             if(dis[v] > dis[u] + ed.w) {
                 dis[v] = dis[u] + ed.w;
-            }
-            tmp = make_pair(dis[v], v);
-            heap.push(tmp);
+                heap.push(make_pair(dis[v], v));
+            }  
         }
     }
     return dis;
@@ -81,14 +78,18 @@ int main() {
             cerr << "illegal bound error!" << endl;
             exit(1);
         }
-        g.add_edge(u, v, w);
+        g.add_edge(u, ver, w);
+    }
+    for(int i = 0; i < v; i++) {
+        cout << "vertex " << i << ": " <<endl;
+        for(auto ed: g.adj(i)) {
+            cout << ed.v << endl;
+        }
     }
     cout << "2. Dijkstra" << endl;
-    vector<int> dis = g.dijkstra(g, 0);
+    vector<int> dis = dijkstra(g, 0);
     for(int i = 0; i < dis.size(); i++) {
         cout << "to vertex " << i << ": " << dis[i] << endl;
     }
-
-
     return 0;
 }

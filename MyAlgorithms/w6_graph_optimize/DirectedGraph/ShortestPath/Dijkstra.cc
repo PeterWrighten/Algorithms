@@ -38,7 +38,8 @@ void Graph::add_edge(int u, int v, int w) {
 }
 
 
-vector<int> dijkstra(Graph& g, int s) {
+vector<int> dijkstra(Graph& g, int s, vector<int>& edgeTo) {
+    edgeTo[s] = s;
     vector<int> dis(g.V(), INT_MAX);
     vector<int> vis(g.V(), 0);
     dis[s] = 0;
@@ -54,11 +55,21 @@ vector<int> dijkstra(Graph& g, int s) {
             int v = ed.v;
             if(dis[v] > dis[u] + ed.w) {
                 dis[v] = dis[u] + ed.w;
+                edgeTo[v] = u;
                 heap.push(make_pair(dis[v], v));
             }  
         }
     }
     return dis;
+}
+
+void printAdj(Graph& g) {
+    for(int i = 0; i < g.V(); i++) {
+        cout << "vertex " << i << ": " <<endl;
+        for(auto ed: g.adj(i)) {
+            cout << ed.v << endl;
+        }
+    }
 }
 
 
@@ -80,16 +91,37 @@ int main() {
         }
         g.add_edge(u, ver, w);
     }
-    for(int i = 0; i < v; i++) {
-        cout << "vertex " << i << ": " <<endl;
-        for(auto ed: g.adj(i)) {
-            cout << ed.v << endl;
-        }
-    }
+
+    cout << "Would you want to print adj matrix ? (Y/N)" << endl;
+    string ans;
+    cin >> ans;
+    if(ans == "Y")  printAdj(g);
+    else if(ans != "N") cout << "You don't input certain answer, so we execute as default(N)." << endl;
+
+    vector<int> edgeTo(g.V(), 0);
     cout << "2. Dijkstra" << endl;
-    vector<int> dis = dijkstra(g, 0);
+    int s;
+    cout << "Input Source: ";
+    cin >> s;
+    vector<int> dis = dijkstra(g, s, edgeTo);
+    vector<int> pathTo;
     for(int i = 0; i < dis.size(); i++) {
         cout << "to vertex " << i << ": " << dis[i] << endl;
+        for(int j = i; j != s; j = edgeTo[j]) {
+            pathTo.push_back(j);
+        }
+        if(!pathTo.empty()) {
+            pathTo.push_back(s);
+        } else {
+            cout << "No way here!" << endl;
+            continue;
+        }
+
+        for(int k = 1; k <= pathTo.size(); k++) {
+            cout << " -> " << pathTo[pathTo.size() - k];
+        }
+        cout << endl;
+        pathTo.clear();
     }
     return 0;
 }

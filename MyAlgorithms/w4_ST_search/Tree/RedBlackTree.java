@@ -127,7 +127,12 @@ public class RedBlackTree<Key extends Comparable<Key>, Value>{
     }
 
     private Node delMin(Node x) {
-        if(x.left == null)   return null;
+        if(x.left == null) {
+            if(x.right == null)
+                return null;
+            else 
+                return x.right;
+        }
         x.left = delMin(x.left);
 
         return x;
